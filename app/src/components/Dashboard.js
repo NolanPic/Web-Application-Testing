@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { strike, ball, foul, hit } from '../utils/at-bat-actions';
 
 const StyledDashboard = styled.div`
     width: 35%;
@@ -14,12 +15,30 @@ const StyledDashboard = styled.div`
 `;
 
 const Dashboard = ({ count, setCount }) => {
+
+    const updateCount = action => {
+        switch(action) {
+            case 'strike':
+                setCount(strike(count));
+                break;
+            case 'ball':
+                setCount(ball(count));
+                break;
+            case 'foul':
+                setCount(foul(count))
+                break;
+            case 'hit':
+                setCount(hit());
+                break;
+        }
+    };
+
     return (
         <StyledDashboard>
-            <button>Strike</button>
-            <button>Ball</button>
-            <button>Foul</button>
-            <button>Hit</button>
+            <button onClick={() => updateCount('strike')}>Strike</button>
+            <button onClick={() => updateCount('ball')}>Ball</button>
+            <button onClick={() => updateCount('foul')}>Foul</button>
+            <button onClick={() => updateCount('hit')}>Hit</button>
         </StyledDashboard>
     );
 };
