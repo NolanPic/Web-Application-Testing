@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Display />
+        <Display balls={balls} strikes={strikes} />
         <Dashboard setBalls={setBalls} setStrikes={setStrikes} />
       </header>
     </div>
