@@ -8,7 +8,10 @@ const StyledDisplay = styled.div`
     margin-bottom: 10rem;
 `;
 
-const Display = ({ balls, strikes }) => {
+const Display = ({ count }) => {
+    
+    const { balls, strikes } = count;
+
     return (
         <StyledDisplay>
             <div>{balls} balls</div>

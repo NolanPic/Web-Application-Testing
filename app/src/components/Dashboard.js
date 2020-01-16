@@ -13,7 +13,7 @@ const StyledDashboard = styled.div`
     }
 `;
 
-const Dashboard = ({ setBalls, setStrikes }) => {
+const Dashboard = ({ count, setCount }) => {
     return (
         <StyledDashboard>
             <button>Strike</button>

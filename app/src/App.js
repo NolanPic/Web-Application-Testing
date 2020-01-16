@@ -6,15 +6,21 @@ import Dashboard from './components/Dashboard';
 
 function App() {
 
-  const [ balls, setBalls ] = useState(0);
-  const [ strikes, setStrikes ] = useState(0);
-
+  const [ count, setCount ] = useState({
+    balls: 0,
+    strikes: 0
+  });
 
   return (
     <div className="App">
       <header className="App-header">
-        <Display balls={balls} strikes={strikes} />
-        <Dashboard setBalls={setBalls} setStrikes={setStrikes} />
+        <Display
+          count={count}
+        />
+        <Dashboard
+          count={count}
+          setCount={setCount}
+        />
       </header>
     </div>
   );
