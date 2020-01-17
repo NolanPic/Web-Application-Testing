@@ -34,7 +34,7 @@ const Dashboard = ({ count, setCount }) => {
     };
 
     return (
-        <StyledDashboard>
+        <StyledDashboard data-testid="dashboard">
             <button onClick={() => updateCount('strike')}>Strike</button>
             <button onClick={() => updateCount('ball')}>Ball</button>
             <button onClick={() => updateCount('foul')}>Foul</button>

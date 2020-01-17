@@ -13,7 +13,7 @@ const Display = ({ count }) => {
     const { balls, strikes } = count;
 
     return (
-        <StyledDisplay>
+        <StyledDisplay data-testid="display">
             <div>{balls} balls</div>
             <div>{strikes} strikes</div>
         </StyledDisplay>
