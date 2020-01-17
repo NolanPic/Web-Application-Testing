@@ -13,3 +13,4 @@ test('renders the dashboard', () => {
   const dashboard = getByTestId('dashboard');
   expect(dashboard).toBeInTheDocument();
 });
+
